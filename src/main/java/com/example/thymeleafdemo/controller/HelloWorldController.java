@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -35,5 +36,14 @@ public class HelloWorldController {
         theModel.addAttribute("theName", name);
         theModel.addAttribute("theMessage",result);
         return "processFormShoutOut";
+    }
+
+    @GetMapping("/processFormVersionThree")
+    public String processFormShoutOutV3(@RequestParam("studentName") String name, Model theModel){
+
+        String newName = name.toUpperCase();
+        String message ="Hey this is v3 but you are so cool Mr. "+ newName;
+        theModel.addAttribute("theMessage", message);
+        return "processFormShoutOutV3";
     }
 }
