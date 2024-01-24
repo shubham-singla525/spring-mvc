@@ -10,7 +10,31 @@
      Country:
      <select th:field="*{country}">
          <option th:each="tempCountry:${countries}" th:value="${tempCountry}" th:text="${tempCountry}">
-     </select>
+     </select><br/>
+
+
+     Favorite Languages:
+     <input type="radio" th:field="*{languages}" th:each="tempLanguages:${languages}" th:text="${tempLanguages}" th:value="${tempLanguages}"><br/>
+
+     Favorite Operating Systems:
+     <input type="checkbox" th:field="*{operatingSystem}" th:each="tempOs: ${operatingSystem}" th:text="${tempOs}" th:value="${tempOs}"/>  <br/>
+
+     <input type="submit" value="Submit">
+ </form>
+</body>
+</html>
+
+<!--     Favorite Operating System:-->
+<!--     <input type="checkbox" th:field="*{operatingSystem}" th:value="Linux">Linux</input>-->
+<!--     <input type="checkbox" th:field="*{operatingSystem}" th:value="MacOs">MacOs</input>-->
+<!--     <input type="checkbox" th:field="*{operatingSystem}" th:value="'Microsoft Windows'">Microsoft Windows</input>-->
+
+<!--     Favorite Languages:-->
+<!--     <input type="radio" th:field="*{languages}" th:value="Java" >Java</input>-->
+<!--     <input type="radio" th:field="*{languages}" th:value="Python" >Python</input>-->
+<!--     <input type="radio" th:field="*{languages}" th:value="Perl" >Perl</input>-->
+<!--     <input type="radio" th:field="*{languages}" th:value="Go" >Go</input>-->
+
 <!--     Country :-->
 <!--     <select th:field="*{country}">-->
 <!--         <option value="India">India</option>-->
@@ -18,7 +42,4 @@
 <!--         <option value="Malaysia">Malaysia</option>-->
 <!--         <option value="France">France</option>-->
 <!--    </select><br/>-->
-     <input type="submit" value="Submit">
- </form>
-</body>
-</html>
+

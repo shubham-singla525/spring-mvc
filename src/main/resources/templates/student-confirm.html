@@ -6,7 +6,12 @@
 <body>
   <p> The student has confirmed his name as <span th:text="${student.firstName}+' '+${student.lastName}"/> </p>
 
-  Country: <span th:text="${student.country}"/>
+  Country: <span th:text="${student.country}"/><br/>
+  Favorite Language: <span th:text="${student.languages}"/><br/>
+  Favorite Operating Systems:
+  <ul>
+    <li th:each="tempOs:${student.operatingSystem}" th:text="${tempOs}"/>
+  </ul>
 
   </form>
 </body>

@@ -1,11 +1,17 @@
 package com.example.thymeleafdemo.model;
 
 
+import java.util.List;
+
 public class Student {
     private String firstName;
     private String lastName;
 
     private String country;
+
+    private String languages;
+
+    private List operatingSystem;
 
     public Student(){
 
@@ -38,6 +44,23 @@ public class Student {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+
+    public String getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String languages) {
+        this.languages = languages;
+    }
+
+    public List getOperatingSystem() {
+        return operatingSystem;
+    }
+
+    public void setOperatingSystem(List operatingSystem) {
+        this.operatingSystem = operatingSystem;
     }
 
     @Override
